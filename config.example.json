@@ -1,0 +1,39 @@
+{
+    "source_type": "directus",
+    "url": "http://localhost:8080",
+    "username": "email@example.com",
+    "password": "yourpasswordHere",
+    "model": [
+        {
+            "name": "users",
+            "collection": "employee",
+            "fields": [
+                "*"
+            ]
+        },
+        {
+            "name": "projects",
+            "collection": "project",
+            "fields": [
+                "customer.name",
+                "customer.short_name",
+                "project_lead.mail",
+                "*"
+            ],
+            "transform": [
+                {
+                    "action": "split_newline",
+                    "field": "endpoints"
+                },
+                {
+                    "action": "remove_intermediate_id",
+                    "field": "members"
+                },
+                {
+                    "action": "remove_intermediate_id",
+                    "field": "aws_accounts"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+cookiecutter
+wheel
+click
+#git+https://github.com/vvatelot/sdk-python.git@refact/facorisation-proposal#egg=directus_api
