@@ -1,4 +1,4 @@
-from directus_api import DirectusClient
+from DataExtruder.directus_api import DirectusClient
 import logging
 import os
 

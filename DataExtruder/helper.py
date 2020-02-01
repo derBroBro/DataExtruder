@@ -11,7 +11,6 @@ def get_config(filename):
         config = json.loads(f.read())
     return config
 
-
 def save_data(filename, data):
     with open(filename, "w") as f:
         f.write(json.dumps(data, indent=4))

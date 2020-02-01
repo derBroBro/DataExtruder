@@ -1,12 +1,17 @@
 __pycache__
 .pytest_cache
-remote_repos
-target
 .vscode
+dist
+*.egg-info
 
 env
+remote_repos
+target
+DataExtruder/directus_api
+
 config.json
 dump.json
+MANIFEST
 
 test.sh
 test.py

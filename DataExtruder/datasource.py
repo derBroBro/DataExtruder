@@ -1,18 +1,18 @@
 import logging
-import helper
-import datasource_directus
+from DataExtruder.helper import save_data
 
 logger = logging.getLogger()
 
 
-def get(config, debug_dump=False):
+def load_data(config, debug_dump=False):
     source_type = config["source_type"]
     data = {}
     if source_type == "directus":
-        data = datasource_directus.load(config)
+        from DataExtruder.datasource_directus import load
+        data = load(config)
     else:
         logger.error(f"Unknown source kind {source_type}")
 
     if debug_dump:
-        helper.save_data("dump.json", data)
+        save_data("dump.json", data)
     return data

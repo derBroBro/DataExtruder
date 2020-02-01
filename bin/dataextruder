@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+
+import DataExtruder
+import logging
+import click
+
+logger = logging.getLogger()
+
+@click.command()
+@click.option('--log-level', default="INFO", help='Log-Level')
+@click.option('--config', default="config.json", help='Config file to use')
+@click.option('--target', default="target", help='Where to store the files created')
+@click.option('--template', prompt='Which template to use')
+def main(log_level, config, target, template):
+    """Render the data."""
+    DataExtruder.main(template=template, config=config, target=target, log_level=log_level)
+
+
+if __name__ == '__main__':
+    main()

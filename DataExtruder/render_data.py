@@ -4,7 +4,7 @@ import logging
 logger = logging.getLogger()
 
 
-def compile(template, target, data):
+def compile_data(template, target, data):
     context = {"cookiecutter": {"project_name": target, "data": data}}
     is_repo = repository.is_repo_url(template)
     if is_repo:

@@ -15,10 +15,12 @@ In planning:
 # Usage
 Create a json file with the required information included.
 Call the CLI as follow: ```app.py --template git+https://foo.bar```  
+## Installation
+Run `pip install DataExtruder`
 
 ## Paramters
 | Paramter        | Default           | Description  |
-| ------------- |:-------------:| -----:|
+| ------------- | ------------- | ----- |
 | --config      | config.josn | The config file used |
 | --template      | NONE | The template folder or url used |
 | --target      | target | The output directory |
